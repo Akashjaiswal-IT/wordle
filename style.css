@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 6px;
+  background-color: #121213;
+  height: 360px;
+  width: 300px;
+  border-radius: 5px;
+  user-select: none;
+  padding: 10px;
+}
+
+.tile {
+  background-color: #181819;
+  border: 1px solid #3a3a3c;
+  color: #fff;
+  height: 52px;
+  width: 52px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.keyboard {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.key {
+  background-color: #808080;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  min-width: 40px;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.key:hover {
+  background-color: #a0a0a0;
+  cursor: pointer;
+}
+
+.key.special {
+  min-width: 60px;
+  font-size: 12px;
+}
+
+.key.backspace::before {
+  content: "⌫";
+  font-size: 16px;
+}
+
+.correct {
+    background-color: #6aaa64;
+    color: white;
+}
+
+.present {
+    background-color: #c9b458; 
+    color: white;
+}
+
+.absent {
+    background-color: #3d3e3f;
+    color: white;
+}
+
+.key.correct {
+  background-color: #6aaa64;
+  color: white;
+}
+
+.key.present {
+  background-color: #c9b458;
+  color: white;
+}
+
+.key.absent {
+  background-color: #4e4f50bc;
+  color: #ffffffa0;
+}
